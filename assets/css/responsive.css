@@ -1,0 +1,132 @@
+/* Mobile & Tablet */
+@media (max-width: 1023px) {
+    :root {
+        --height-header: 70px;
+        --height-nav: 0px;
+    }
+    .hide-on-mobile-tablet {
+        display: none;
+    }
+
+    .header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 99;
+    }
+
+    .header__cart-have {
+        position: fixed;
+        top: var(--height-header);
+        right: 0;
+        width: 100%;
+        padding: 0 calc((100% - 644px) / 2);
+    }
+
+    .header__cart-have::after {
+        display: none;
+    }
+
+    .header__sort-bar {
+        display: flex;
+    }
+
+    .content {
+        padding-top: 8px;
+        margin-top: calc(var(--height-header) + var(--height-sort-bar));
+    }
+
+    .mobile-category {
+        display: block;
+    }
+
+    .hihi {
+        display: none;
+    }
+}
+
+/* Tablet */
+
+@media (min-width: 740px) and (max-width: 1023px) {
+    .hide-on-taplet {
+        display: none;
+    }
+
+    .header__logo {
+        width: 120px;
+    }
+
+    .header__logo-img {
+        width: 100px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+    .hide-on-mobile {
+        display: none;
+    }
+
+    .app {
+        overflow: hidden;
+    }
+
+    .header-with-search {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header__logo,
+    .header__cart {
+        width: unset;
+    }
+
+    .header__search {
+        position: fixed;
+        top: var(--height-header);
+        left: 0;
+        right: 0;
+        height: var(--height-sort-bar);
+        border: 1px solid #e5e5e5;
+        z-index: 1;
+        padding: 0 4px;
+        animation: mobilesearch linear 0.6s;
+        display: none;
+    }
+
+    @keyframes mobilesearch {
+        from {
+            opacity: 0;
+            top: calc(var(--height-header) - var(--height-sort-bar));
+        }
+        to {
+            opacity: 1;
+            top: var(--height-header);
+        }
+    }
+
+    .pagination-item {
+        padding: 0 4px;
+    }
+    
+    .content {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .header__mobile-search {
+        display: block;
+    }
+
+    .footer__heading {
+        text-align: center;
+    }
+
+    .footer__list {
+        text-align: center;
+    }
+
+    .footer__downl {
+        justify-content: center;
+    }
+}
